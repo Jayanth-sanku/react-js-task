@@ -1,0 +1,119 @@
+
+.navbar {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.logo {
+  width: 130px;
+}
+
+.nav-middle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: black; 
+  font-size: 18px;
+}
+
+.navbar-menu li {
+  cursor: pointer;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  cursor: pointer;
+  color: black;
+}
+
+.options-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.navbar-right:hover .options-dropdown {
+  display: block;
+}
+
+.options-dropdown p {
+  margin: 5px 0;
+  cursor: pointer;
+  color: black; 
+}
+
+.options-dropdown p:hover {
+  text-decoration: underline;
+}
+
+
+.menu-card {
+  position: absolute;
+  top: calc(100% + 5px); 
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  width: 100%; 
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-items li {
+  cursor: pointer;
+  padding: 8px 0;
+  color: black; 
+}
+
+.menu-items li:hover {
+  background-color: #f0f0f0;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-card {
+    display: block;
+  }
+}
